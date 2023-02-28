@@ -29,6 +29,11 @@ def perform_test():
     ''' '''
     return {'Test': 'Test passed!'}
 
+@app.get('/newtest', status_code=status.HTTP_200_OK)
+def perform_test():
+    ''' '''
+    return {'NewTest': 'Test passed!'}
+
 # from routers.router_utils import *
 # from datetime import datetime
 # import time
