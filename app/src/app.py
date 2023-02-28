@@ -25,7 +25,7 @@ def perform_healthcheck():
     return {'healthcheck': 'Everything OK!'}
 
 @app.get('/test', status_code=status.HTTP_200_OK)
-def perform_healthcheck():
+def perform_test():
     ''' '''
     return {'Test': 'Test passed!'}
 
