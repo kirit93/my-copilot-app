@@ -14,5 +14,6 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
 RUN unzip awscliv2.zip
 RUN ./aws/install 
 
+RUN echo "UPdating dockerfile"
 # run FastAPI app using gunicorn
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
