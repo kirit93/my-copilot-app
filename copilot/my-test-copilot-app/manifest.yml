@@ -1,11 +1,11 @@
 # The manifest for the "reverse" service.
-# Read the full specification for the "Load Balanced Web Service" type at:
+# Read the full specification for the "Request-Driven Web Service" type at:
 #  https://github.com/aws/copilot-cli/wiki/Manifests#load-balanced-web-svc
 
 # Your service name will be used in naming your resources like log groups, ECS services, etc.
-name: reverse
+name: my-test-copilot-app
 # The "architecture" of the service you're running.
-type: Load Balanced Web Service
+type: Request-Driven Web Service
 
 image:
   # Path to your service's Dockerfile.
@@ -18,7 +18,7 @@ http:
   # To match all requests you can use the "/" path. 
   path: '/'
   # You can specify a custom health check path. The default is "/"
-  # healthcheck: '/'
+  healthcheck: '/healthcheck'
 
 # Number of CPU units for the task.
 cpu: 256

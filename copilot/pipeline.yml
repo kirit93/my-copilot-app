@@ -1,7 +1,7 @@
 # This YAML file defines the relationship and deployment ordering of your environments.
 
 # The name of the pipeline
-name: pipeline-std-string-reverse
+name: pipeline-test-my-copilot-service
 
 # The version of the schema used in this template
 version: 1
@@ -15,19 +15,19 @@ source:
   # has the following properties: repository, branch.
   properties:
     branch: master
-    repository: https://github.com/nathanpeck/string-reverse
+    repository: https://github.com/kirit93/my-copilot-app
     # Optional: specify the name of an existing CodeStar Connections connection.
-    # connection_name: a-connection
+    connection_name: test-conn
 
 # The deployment section defines the order the pipeline will deploy
 # to your environments.
 stages:
-    - # The name of the environment to deploy to.
-      name: test
-      # Optional: use test commands to validate this stage of your build.
-      test_commands:
-        - npm install --prefix test
-        - APP_URL=https://reverse.test.std.string.services npm test --prefix test
+    # - # The name of the environment to deploy to.
+    #   name: test
+    #   # Optional: use test commands to validate this stage of your build.
+    #   test_commands:
+    #     - npm install --prefix test
+    #     - APP_URL=https://reverse.test.std.string.services npm test --prefix test
 
     - # The name of the environment to deploy to.
       name: prod
