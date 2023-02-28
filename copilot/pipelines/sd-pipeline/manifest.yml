@@ -1,9 +1,9 @@
-# The manifest for the "sd-app-pipeline" pipeline.
+# The manifest for the "sd-pipeline" pipeline.
 # This YAML file defines your pipeline: the source repository it tracks and the order of the environments to deploy to.
 # For more info: https://aws.github.io/copilot-cli/docs/manifest/pipeline/
 
 # The name of the pipeline.
-name: sd-app-pipeline
+name: sd-pipeline
 
 # The version of the schema used in this template.
 version: 1
@@ -18,7 +18,7 @@ source:
     branch: master
     repository: https://github.com/kirit93/my-copilot-app
     # Optional: specify the name of an existing CodeStar Connections connection.
-    connection_name: copilot-kirit-my-copilot-app
+    # connection_name: a-connection
 
 # This section defines the order of the environments your pipeline will deploy to.
 stages:
