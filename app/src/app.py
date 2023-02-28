@@ -19,6 +19,11 @@ app = FastAPI(
 def redirect_to_docs():
     return RedirectResponse('/docs')
 
+@app.get('/healthcheck', status_code=status.HTTP_200_OK)
+def perform_healthcheck():
+    ''' '''
+    return {'healthcheck': 'Everything OK!'}
+
 
 
 # from routers.router_utils import *
