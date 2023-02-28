@@ -18,7 +18,7 @@ source:
     branch: master
     repository: https://github.com/kirit93/my-copilot-app
     # Optional: specify the name of an existing CodeStar Connections connection.
-    # connection_name: a-connection
+    connection_name: copilot-kirit-my-copilot-app
 
 # This section defines the order of the environments your pipeline will deploy to.
 stages:
